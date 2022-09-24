@@ -1,6 +1,7 @@
 import './style.css'
 import * as three from 'three'
 import * as Quote from 'quotesy'; 
+import '/vaporWave3.jpg'
 
 const scene = new three.Scene(); 
 const perspectiveCamera = new three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 50);  
@@ -58,8 +59,16 @@ ambientLight.position.set(5, 5, 5);
 
 scene.add(plane, plane2, plane3, plane4, plane5, ambientLight); 
 
-const vaporWaveTexture = new three.TextureLoader().load('vaporWave3.jpg');
-scene.background = vaporWaveTexture;  
+
+const vaporWaveTextureLoader = new three.TextureLoader(); 
+
+const textaaa = vaporWaveTextureLoader.load(
+	// resource URL
+	'/vaporWave3.jpg',
+);
+
+
+scene.background = textaaa;  
 
 var quoteHTMLElement = document.createElement('div');
 quoteHTMLElement.style.position = 'absolute';
