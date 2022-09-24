@@ -64,7 +64,7 @@ const vaporWaveTextureLoader = new three.TextureLoader();
 
 const textaaa = vaporWaveTextureLoader.load(
 	// resource URL
-	'/vaporWave3.jpg',
+	'https://raw.githubusercontent.com/hannad4/vaporQuotes/gh-pages/vaporWave3.jpg',
 );
 
 
@@ -92,6 +92,22 @@ const animate = () => {
 
   requestAnimationFrame(animate);
 }; 
+
+// Event listener to handle screen resize
+window.addEventListener('resize', () => {
+  // Update sizes
+  window.innerWidth = window.innerWidth;
+  window.innerHeight = window.innerHeight;
+
+  // Update camera's aspect ratio and projection matrix
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height);
+  // Note: We set the pixel ratio of the renderer to at most 2
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
 
 function pullQuote() {
   plane.material.color.set(random_hex_color_code())
