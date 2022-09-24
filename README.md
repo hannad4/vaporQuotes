@@ -7,7 +7,6 @@ The following repository consists of a simple vaporwave animation created via th
 ## Use Cases and Instructions
 This simple backdrop may be nice to use as your default new tab home page, or even as your desktop background via the use of a program like [Lively](https://rocksdanister.github.io/lively/). 
 
-Once this site is live, simply navigate to https://hannad4.github.io/vaporQuotes to view the site (again, still a work in progress), and set it as your source in either your browser or lively. Alternatively, you can clone this repository and host/change the site to your liking!
+Once this site is live, simply navigate to https://hannad4.github.io/vaporQuotes to view the site, and set it as your source in either your browser or lively. Alternatively, you can clone this repository and host/change the site to your liking!
 
 Enjoy!
-
